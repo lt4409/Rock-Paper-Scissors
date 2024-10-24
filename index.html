@@ -8,10 +8,20 @@
 <body>
 
   <script>
-    function getComputerChoice(input) {
-    const rock = 1;
-    const paper = 2;
-    const scissors = 3;    
+
+    function getComputerChoice() {
+        const randomNumber = Math.floor(Math.random() * 3) + 1; 
+        return randomNumber;
+    }
+
+    let computerChoice = getComputerChoice();
+
+    if (computerChoice == 1) {
+        console.log("rock")
+    } else if (computerChoice == 2) {
+        console.log("paper")
+    } else if (computerChoice == 3) {
+        console.log("scissors")
     }
   </script>
 </body>
