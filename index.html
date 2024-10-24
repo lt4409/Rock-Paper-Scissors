@@ -17,12 +17,46 @@
     let computerChoice = getComputerChoice();
 
     if (computerChoice == 1) {
-        console.log("rock")
+      computerChoice = "rock"
     } else if (computerChoice == 2) {
-        console.log("paper")
+        computerChoice = "paper"
     } else if (computerChoice == 3) {
-        console.log("scissors")
+        computerChoice = "scissors"
     }
+
+    let humanChoice = prompt("Rock, Paper or Scissors?");
+    function getHumanChoice() {
+      return humanChoice;
+    }
+
+    if ((humanChoice == "rock" || humanChoice == "Rock" && computerChoice == "rock" || computerChoice == "Rock")) {
+      console.log("Draw!")
+    }
+    else if ((humanChoice == "rock" || humanChoice == "Rock" && computerChoice == "paper" || computerChoice == "Paper")) {
+      console.log("Too bad. You lost!")
+    }
+    else if ((humanChoice == "rock" || humanChoice == "Rock" && computerChoice == "scissors" || computerChoice == "Scissors")) {
+      console.log("Congratulations! You Won!")
+    }
+    else if ((humanChoice == "paper" || humanChoice == "Paper" && computerChoice == "paper" || computerChoice == "Paper")) {
+      console.log("Draw!")
+    }
+    else if ((humanChoice == "paper" || humanChoice == "Paper" && computerChoice == "rock" || computerChoice == "Rock")) {
+      console.log("Congratulations! You Won!")
+    }
+    else if ((humanChoice == "paper" || humanChoice == "Paper" && computerChoice == "scissors" || computerChoice == "Scissors")) {
+      console.log("Too bad. You lost!")
+    }
+    else if ((humanChoice == "scissors" || humanChoice == "Scissors" && computerChoice == "scissors" || computerChoice == "Scissors")) {
+      console.log("Draw!")
+    }
+    else if ((humanChoice == "scissors" || humanChoice == "Scissors" && computerChoice == "rock" || computerChoice == "Rock")) {
+      console.log("Too bad. You lost!")
+    }
+    else if ((humanChoice == "scissors" || humanChoice == "Scissors" && computerChoice == "paper" || computerChoice == "Paper")) {
+      console.log("Congratulations! You Won!")
+    }
+  
   </script>
 </body>
 </html>
