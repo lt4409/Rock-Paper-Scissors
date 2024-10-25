@@ -39,7 +39,7 @@
         (humanChoice === "scissors" && computerChoice === "paper") 
       ) {
         console.log("You win!");
-        humanScore = humanScore + 1; 
+        humanScore++;
         return "win";
       }
       else if (
@@ -48,7 +48,7 @@
         (humanChoice === "scissors" && computerChoice === "rock")
       ) {
         console.log("That's too bad. You lose!");
-        computerScore = computerScore + 1;
+        computerScore++;
         return "lose";
       }
     }
