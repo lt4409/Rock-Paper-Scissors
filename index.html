@@ -11,18 +11,16 @@
 
     function getComputerChoice() {
         const randomNumber = Math.floor(Math.random() * 3) + 1; 
-        return randomNumber;
+        if (randomNumber == 1) {
+         return "rock";
+        } else if (randomNumber == 2) {
+         return "paper";
+        } else if (randomNumber == 3) {
+         return "scissors";
+    }
     }
 
-    let computerChoice = getComputerChoice();
-
-    if (computerChoice == 1) {
-      computerChoice = "rock"
-    } else if (computerChoice == 2) {
-        computerChoice = "paper"
-    } else if (computerChoice == 3) {
-        computerChoice = "scissors"
-    }
+   let computerChoice = getComputerChoice() 
 
     let humanChoice = prompt("Rock, Paper or Scissors?");
     function getHumanChoice() {
@@ -56,11 +54,16 @@
         return "lose";
       }
     }
-    humanChoice = getHumanChoice();
 
-    playRound(humanChoice, computerChoice);
-    console.log("The score is " + humanScore + " : " + computerScore);
-
+    function playGame() {
+      for (let i = 0; i < 5; i++) {
+        let computerChoice = getComputerChoice();
+        let humanChoice = prompt("Rock, Paper or Scissors?").toLowerCase(); 
+        playRound(humanChoice, computerChoice) 
+      }
+      console.log("The score is " + humanScore + " : " + computerScore);
+    } 
+    playGame();
   </script>
 </body>
 </html>
