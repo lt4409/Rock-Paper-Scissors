@@ -26,7 +26,7 @@
 
     let humanChoice = prompt("Rock, Paper or Scissors?");
     function getHumanChoice() {
-      return humanChoice;
+      return humanChoice.toLowerCase();
     }
 
     let humanScore = 0
@@ -55,9 +55,11 @@
         computerScore = computerScore + 1;
         return "lose";
       }
-      console.log("The score is" + " " + humanScore + " " + ":" + " " + computerScore)
-
     }
+    humanChoice = getHumanChoice();
+
+    playRound(humanChoice, computerChoice);
+    console.log("The score is " + humanScore + " : " + computerScore);
 
   </script>
 </body>
