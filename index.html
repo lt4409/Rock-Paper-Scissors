@@ -6,6 +6,9 @@
   <title>Document</title>
 </head>
 <body>
+  <button id="rock">Rock</button>
+  <button id="paper">Paper</button>
+  <button id="scissors">Scissors</button>
 
   <script>
 
@@ -29,6 +32,11 @@
     let computerScore = 0
 
     function playRound(humanChoice, computerChoice) {
+      computerChoice = getComputerChoice();
+
+      console.log("Your Choice; " + humanChoice);
+      console.log("Computer's choice: " + computerChoice);
+
       if (humanChoice === computerChoice) {
         console.log("It's a draw!");
         return "draw";
@@ -51,6 +59,28 @@
         computerScore++;
         return "lose";
       }
+      function playGame() {
+      
+      console.log("The score is " + humanScore + " : " + computerScore);
+    } 
+    playGame(); 
+
+    const rockButton = document.getElementById('rock');
+    const paperButton = document.getElementById('paper');
+    const scissorsButton = document.getElementById('scissors');
+
+    rockButton.addEventListener('click', function(){
+      playround("rock");
+    });
+
+    paperButton.addEventListener('click', function(){
+      playround("paper");
+    });
+
+    scissorsButton.addEventListener('click', function(){
+      playround("scissors");
+    });
+
     }
   </script>
 </body>
