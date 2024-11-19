@@ -52,16 +52,6 @@
         return "lose";
       }
     }
-
-    function playGame() {
-      for (let i = 0; i < 5; i++) {
-        let computerChoice = getComputerChoice();
-        let humanChoice = prompt("Rock, Paper or Scissors?").toLowerCase(); 
-        playRound(humanChoice, computerChoice) 
-      }
-      console.log("The score is " + humanScore + " : " + computerScore);
-    } 
-    playGame();
   </script>
 </body>
 </html>
